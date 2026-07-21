@@ -418,6 +418,7 @@ footer{
     font-family:Arial, Helvetica, sans-serif;
 }
 
+
 body{
     background:#fff;
     color:#666;
@@ -599,6 +600,206 @@ body{
 
     width:100%;
 
+}
+
+}
+
+/*====================================
+    RECYCLE SECTION
+====================================*/
+
+.recycle-section{
+    position: relative;
+    width: 100%;
+    padding: 90px 8%;
+    overflow: hidden;
+
+    background: linear-gradient(135deg,#0f8b46,#42b549,#78d84c);
+}
+
+/* Decorative circles */
+
+.recycle-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-220px;
+    right:-120px;
+}
+
+.recycle-section::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    bottom:-180px;
+    left:-120px;
+}
+
+/* Container */
+
+.recycle-container{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+}
+
+/* LEFT */
+
+.recycle-left{
+
+    flex:1;
+}
+
+.recycle-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(6px);
+
+    margin-bottom:28px;
+}
+
+.recycle-left h1{
+
+    color:#fff;
+
+    font-size:68px;
+
+    font-family:Georgia,serif;
+
+    font-weight:700;
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+}
+
+/* Center Icon */
+
+.recycle-icon{
+
+    font-size:95px;
+
+    color:rgba(255,255,255,.18);
+
+    animation:rotateRecycle 18s linear infinite;
+}
+
+@keyframes rotateRecycle{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* RIGHT */
+
+.recycle-right{
+
+    flex:1;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    color:#fff;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.recycle-right p{
+
+    margin-bottom:18px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.recycle-container{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+.recycle-left h1{
+
+    font-size:48px;
+}
+
+.recycle-icon{
+
+    margin:20px 0;
+}
+
+.recycle-right{
+
+    width:100%;
+}
+
+}
+
+@media(max-width:600px){
+
+.recycle-left h1{
+
+    font-size:38px;
+}
+
+.recycle-right{
+
+    font-size:16px;
+
+    padding:30px;
+}
+
+.recycle-tag{
+
+    font-size:16px;
+}
+
+.recycle-icon{
+
+    font-size:70px;
 }
 
 }

@@ -194,7 +194,7 @@ body{
     left:50%;
     transform:translate(-50%,-50%);
     text-align:center;
-    color:#000000;
+    color:#239a38;
     width:90%;
     max-width:900px;
 }
@@ -1139,3 +1139,7 @@ color: #1bb54a;
     visibility:visible;
     transform:translateY(0);
 }
+
+
+
+
