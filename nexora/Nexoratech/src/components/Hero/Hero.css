@@ -1,0 +1,42 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #fff;
+}
+
+.hero__content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: #fff;
+  color: var(--color-primary);
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

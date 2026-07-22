@@ -1,0 +1,37 @@
+.testimonial-card {
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.testimonial-card__quote {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card__name {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.testimonial-card__role {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}

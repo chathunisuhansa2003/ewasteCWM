@@ -1,0 +1,18 @@
+{
+  "name": "ewaste-client",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cd vite-project && npx vite",
+    "build": "cd vite-project && npx vite build",
+    "preview": "cd vite-project && npx vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.1.1"
+  },
+  "dependencies": {
+    "react-countup": "^6.5.3",
+    "react-router-dom": "^7.18.1"
+  }
+}

@@ -1,0 +1,27 @@
+.home .section {
+  padding: 4rem 0;
+}
+
+.home .section--alt {
+  background: var(--color-surface-alt);
+}
+
+.home .section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home .grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.home .grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.home .grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
