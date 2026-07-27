@@ -1,9 +1,0 @@
-.portfolio .section {
-  padding: 4rem 0;
-}
-
-.portfolio__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
