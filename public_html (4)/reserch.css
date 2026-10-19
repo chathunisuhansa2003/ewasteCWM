@@ -1,0 +1,1467 @@
+/* =========================================================
+   CEYLON WASTE MANAGEMENT
+   RESEARCH & DEVELOPMENT PAGE
+   Main Green: #32c037
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --green: #32c037;
+    --green-dark: #24962b;
+    --green-deep: #176d20;
+    --green-light: #65d968;
+
+    --green-soft: #eaf9eb;
+    --green-pale: #f5fcf5;
+
+    --white: #ffffff;
+
+    --text-dark: #1d3022;
+    --text: #59675c;
+    --text-light: #7d8a80;
+
+    --border: #e0ebe1;
+
+    --shadow:
+        0 12px 35px rgba(25, 91, 32, 0.09);
+
+    --shadow-hover:
+        0 22px 55px rgba(25, 91, 32, 0.17);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(50, 192, 55, 0.05),
+            transparent 28%
+        ),
+        #f8fbf8;
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 84px;
+
+    z-index: 9999;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(50, 192, 55, 0.10);
+
+    box-shadow:
+        0 7px 30px rgba(25, 91, 32, 0.08);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 92%;
+    max-width: 1380px;
+
+    height: 84px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo img {
+    width: 150px;
+    height: auto;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 27px;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links > li > a {
+    position: relative;
+
+    display: block;
+
+    padding: 31px 0;
+
+    color: #293b2c;
+
+    font-size: 13.5px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* Navigation underline */
+
+.nav-links > li > a:not(.nav-btn)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 21px;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #32c037,
+            #65d968
+        );
+
+    border-radius: 10px;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+}
+
+.nav-links > li > a:hover {
+    color: #32c037;
+}
+
+.nav-links > li > a:hover::after {
+    width: 70%;
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% - 5px);
+    left: 50%;
+
+    width: 280px;
+
+    padding: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.99);
+
+    border:
+        1px solid rgba(50, 192, 55, 0.12);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(25, 91, 32, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate(-50%, 15px);
+
+    transition:
+        all 0.25s ease;
+
+    z-index: 10000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate(-50%, 0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+
+    padding: 11px 15px;
+
+    color: #536057;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        all 0.25s ease;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--green-dark);
+
+    background: var(--green-soft);
+
+    padding-left: 20px;
+}
+
+
+/* =========================================================
+   SCHEDULE PICKUP BUTTON
+========================================================= */
+
+.nav-links .nav-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        12px 21px !important;
+
+    color:
+        #ffffff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #32c037,
+            #24962b
+        );
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 22px rgba(50, 192, 55, 0.28);
+
+    white-space: nowrap;
+
+    transition:
+        all 0.3s ease;
+}
+
+.nav-links .nav-btn::after {
+    display: none !important;
+}
+
+.nav-links .nav-btn:hover {
+    color:
+        #ffffff !important;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 13px 30px rgba(50, 192, 55, 0.36);
+}
+
+
+/* =========================================================
+   HERO BANNER
+========================================================= */
+
+.cwm-banner {
+    position: relative;
+
+    width: 92%;
+    max-width: 1380px;
+
+    height: 410px;
+
+    margin:
+        100px auto 0;
+
+    overflow: hidden;
+
+    border-radius:
+        0 0 36px 36px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 87, 23, 0.96) 0%,
+            rgba(36, 150, 43, 0.88) 40%,
+            rgba(50, 192, 55, 0.52) 72%,
+            rgba(17, 84, 23, 0.25) 100%
+        ),
+        url("images/research.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 25px 60px rgba(25, 91, 32, 0.20);
+}
+
+
+/* Dark overlay */
+
+.cwm-banner::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.14),
+            transparent 70%
+        );
+}
+
+
+/* Decorative glow */
+
+.cwm-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    right: -180px;
+    top: -250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.18),
+            transparent 68%
+        );
+}
+
+
+/* =========================================================
+   BANNER CONTENT
+========================================================= */
+
+.banner-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    padding:
+        75px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
+}
+
+
+/* Badge */
+
+.banner-content::before {
+    content: "INNOVATION & SUSTAINABILITY";
+
+    width: fit-content;
+
+    margin-bottom: 18px;
+
+    padding:
+        8px 17px;
+
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(8px);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.banner-content h1 {
+    max-width: 850px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(40px, 4.8vw, 64px);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -2.5px;
+
+    text-shadow:
+        0 6px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   BANNER DECORATION
+========================================================= */
+
+.overlay-circle {
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    right: -250px;
+    top: -260px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 50%;
+}
+
+.overlay-circle2 {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: 100px;
+    bottom: -270px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.11);
+
+    border-radius: 50%;
+}
+
+
+/* Hide stray icon */
+
+.cwm-banner > .fa-recycle {
+    display: none;
+}
+
+
+/* CWM text */
+
+.about-cwm-content {
+    position: absolute;
+
+    left: 8%;
+    bottom: 35px;
+
+    z-index: 10;
+}
+
+.about-cwm-content h4 {
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.about-page {
+    width: 92%;
+    max-width: 1380px;
+
+    margin:
+        80px auto 110px;
+
+    display: grid;
+
+    grid-template-columns:
+        270px minmax(0, 1fr);
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.about-sidebar {
+    position: sticky;
+
+    top: 115px;
+
+    padding:
+        30px 24px;
+
+    background:
+        rgba(255, 255, 255, 0.98);
+
+    border:
+        1px solid rgba(50, 192, 55, 0.12);
+
+    border-radius: 21px;
+
+    box-shadow: var(--shadow);
+}
+
+.about-sidebar h2 {
+    position: relative;
+
+    margin-bottom: 27px;
+    padding-bottom: 18px;
+
+    color: #32c037;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.about-sidebar h2::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 52px;
+    height: 4px;
+
+    background: #32c037;
+
+    border-radius: 20px;
+}
+
+
+/* Sidebar list */
+
+.about-sidebar ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.about-sidebar li a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        12px 14px;
+
+    color: #5c695f;
+
+    border-radius: 10px;
+
+    font-size: 13.5px;
+    font-weight: 500;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* Dot */
+
+.about-sidebar li a::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 10px;
+
+    flex-shrink: 0;
+
+    background: #b5c8b7;
+
+    border-radius: 50%;
+
+    transition:
+        all 0.25s ease;
+}
+
+.about-sidebar li a:hover {
+    color: #32c037;
+
+    background: var(--green-soft);
+
+    padding-left: 18px;
+}
+
+.about-sidebar li a:hover::before {
+    background: #32c037;
+}
+
+
+/* Active sidebar item */
+
+.about-sidebar li.active a {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #32c037,
+            #24962b
+        );
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 22px rgba(50, 192, 55, 0.25);
+}
+
+.about-sidebar li.active a::before {
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.about-content {
+    min-width: 0;
+
+    padding:
+        5px 10px 30px;
+}
+
+
+/* Main heading */
+
+.about-content > h1 {
+    margin-bottom: 15px;
+
+    color: #32c037;
+
+    font-size:
+        clamp(38px, 4.2vw, 52px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   TITLE LINE
+========================================================= */
+
+.title-line {
+    position: relative;
+
+    width: 100%;
+    height: 1px;
+
+    margin:
+        0 0 38px;
+
+    background: var(--border);
+}
+
+.title-line::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: -2px;
+
+    width: 95px;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #32c037,
+            #65d968
+        );
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   R&D IMAGE GALLERY
+========================================================= */
+
+.ewaste-gallery {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 1fr;
+
+    grid-template-rows:
+        230px 230px;
+
+    gap: 18px;
+
+    margin:
+        0 0 45px;
+}
+
+
+/* Large image */
+
+.gallery-item:first-child {
+    grid-row: span 2;
+}
+
+
+/* Gallery card */
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--green-soft);
+
+    border:
+        1px solid rgba(50, 192, 55, 0.12);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 32px rgba(25, 91, 32, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 22px 45px rgba(25, 91, 32, 0.17);
+}
+
+
+/* Gallery images */
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform:
+        scale(1.07);
+
+    filter:
+        brightness(0.90);
+}
+
+
+/* Image overlay */
+
+.gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(14, 94, 24, 0.38),
+            transparent 55%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+
+/* Green corner decoration */
+
+.gallery-item::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #32c037,
+            #65d968
+        );
+
+    transition:
+        width 0.4s ease;
+}
+
+.gallery-item:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================================
+   INTRO PARAGRAPH
+========================================================= */
+
+.about-content > p {
+    max-width: 1000px;
+
+    margin-bottom: 30px;
+
+    color: #5d6b60;
+
+    font-size: 15px;
+
+    line-height: 1.95;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   R&D SECTION HEADINGS
+========================================================= */
+
+.about-content h3 {
+    position: relative;
+
+    margin:
+        35px 0 18px;
+
+    padding:
+        16px 22px 16px 25px;
+
+    color: #32c037;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(50, 192, 55, 0.09),
+            rgba(50, 192, 55, 0.015)
+        );
+
+    border-left:
+        5px solid #32c037;
+
+    border-radius:
+        0 14px 14px 0;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    box-shadow:
+        0 7px 25px rgba(25, 91, 32, 0.05);
+
+    transition:
+        all 0.3s ease;
+}
+
+.about-content h3:hover {
+    padding-left: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(50, 192, 55, 0.14),
+            rgba(50, 192, 55, 0.02)
+        );
+}
+
+
+/* =========================================================
+   SECTION PARAGRAPHS
+========================================================= */
+
+.about-content h3 + p {
+    position: relative;
+
+    margin:
+        0 0 32px;
+
+    padding:
+        23px 25px;
+
+    color: #59675c;
+
+    background: #ffffff;
+
+    border:
+        1px solid rgba(50, 192, 55, 0.11);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 9px 28px rgba(25, 91, 32, 0.06);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-content h3 + p:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(25, 91, 32, 0.10);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edf4ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #32c037,
+            #24962b
+        );
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #24962b;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+    color: #ffffff;
+
+    background: #32c037;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links > li > a {
+        font-size: 12px;
+    }
+
+    .about-page {
+        grid-template-columns:
+            240px minmax(0, 1fr);
+
+        gap: 35px;
+    }
+
+    .ewaste-gallery {
+        grid-template-rows:
+            210px 210px;
+    }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    header {
+        height: auto;
+
+        min-height: 84px;
+    }
+
+    .navbar {
+        height: auto;
+
+        min-height: 84px;
+
+        padding:
+            15px 0;
+
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap:
+            8px 18px;
+    }
+
+    .nav-links > li > a {
+        padding:
+            8px 0;
+    }
+
+    .nav-links > li > a::after {
+        bottom: 0;
+    }
+
+
+    /* Banner */
+
+    .cwm-banner {
+        height: 360px;
+
+        margin-top: 175px;
+    }
+
+
+    /* Main page */
+
+    .about-page {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-sidebar {
+        position: static;
+    }
+
+    .about-sidebar ul {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    /* Gallery */
+
+    .ewaste-gallery {
+        grid-template-columns:
+            1.25fr 1fr;
+
+        grid-template-rows:
+            200px 200px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+
+    .navbar {
+        width: 90%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        gap: 3px;
+
+        margin-top: 8px;
+    }
+
+    .nav-links > li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .nav-links > li > a {
+        padding: 9px;
+
+        border-radius: 8px;
+    }
+
+    .nav-links > li > a::after {
+        display: none;
+    }
+
+    .nav-links > li > a:hover {
+        background: var(--green-soft);
+    }
+
+    .nav-links .nav-btn {
+        margin-top: 6px;
+    }
+
+
+    /* Dropdown */
+
+    .dropdown-menu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        background: #f6fbf6;
+
+        border: none;
+
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+
+        transform: none;
+    }
+
+
+    /* Banner */
+
+    .cwm-banner {
+        width: 92%;
+
+        height: 310px;
+
+        margin-top: 25px;
+
+        border-radius: 25px;
+    }
+
+    .banner-content {
+        padding:
+            45px 30px;
+    }
+
+    .banner-content h1 {
+        max-width: 550px;
+
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .about-cwm-content {
+        left: 30px;
+        bottom: 25px;
+    }
+
+
+    /* Main */
+
+    .about-page {
+        width: 90%;
+
+        margin:
+            55px auto 80px;
+
+        gap: 40px;
+    }
+
+
+    /* Sidebar */
+
+    .about-sidebar {
+        padding:
+            25px 20px;
+    }
+
+    .about-sidebar h2 {
+        font-size: 27px;
+    }
+
+    .about-sidebar ul {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Content */
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-content > h1 {
+        font-size: 36px;
+
+        letter-spacing: -1px;
+    }
+
+    .about-content > p {
+        font-size: 14px;
+
+        text-align: left;
+
+        line-height: 1.85;
+    }
+
+
+    /* Gallery */
+
+    .ewaste-gallery {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            repeat(3, 240px);
+
+        gap: 15px;
+    }
+
+    .gallery-item:first-child {
+        grid-row: auto;
+    }
+
+
+    /* R&D cards */
+
+    .about-content h3 {
+        font-size: 19px;
+
+        padding:
+            14px 17px;
+
+        border-left-width: 4px;
+    }
+
+    .about-content h3 + p {
+        padding:
+            20px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cwm-banner {
+        height: 290px;
+    }
+
+    .banner-content {
+        padding:
+            35px 22px;
+    }
+
+    .banner-content::before {
+        padding:
+            7px 13px;
+
+        font-size: 8.5px;
+
+        letter-spacing: 1.1px;
+    }
+
+    .banner-content h1 {
+        font-size: 31px;
+
+        line-height: 1.12;
+    }
+
+    .about-cwm-content {
+        left: 22px;
+    }
+
+    .about-page {
+        width: 92%;
+    }
+
+    .about-sidebar {
+        border-radius: 17px;
+    }
+
+    .about-content > h1 {
+        font-size: 31px;
+    }
+
+    .ewaste-gallery {
+        grid-template-rows:
+            repeat(3, 210px);
+    }
+
+    .gallery-item {
+        border-radius: 15px;
+    }
+
+    .about-content h3 {
+        font-size: 17px;
+    }
+
+    .about-content h3 + p {
+        padding: 18px;
+
+        font-size: 13.5px;
+    }
+}
