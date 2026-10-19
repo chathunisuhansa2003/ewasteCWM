@@ -19,7 +19,7 @@
             <li><a href="index.html">Home</a></li>
             
             <li class="dropdown">
-            <a href="#">About Us ▾</a>
+            <a href="#">Who We Are ▾</a>
             <ul class="dropdown-menu">
                  <li><a href="aboutcwm.html">About CWM GROUP</a></li>
                 <li><a href="vision.html">Mission & Vision</a></li>
@@ -27,14 +27,16 @@
                 <li><a href="ourjourney.html">Our Journey</a></li>
                 <li><a href="leadership.html">Leadership</a></li>
                          <li><a href="reserch.html">Research & Development (R&D)</a></li>
-            </ul>
+                <li><a href="projects.html">Projects and Case Studies</a></li>
+                <li><a href="industries.html">Industries We Serve</a></li>
+                        </ul>
 
 
 
 
             
             <li class="dropdown">
-            <a href="#">Our Services ▾</a>
+            <a href="#">What We Do▾</a>
             <ul class="dropdown-menu">
                 <li><a href="securitydata.html">Security Data Destruction</a></li>
                 <li><a href="ewasterecycle.html">E-Waste Recycling</a></li>
@@ -42,7 +44,7 @@
                 <li><a href="battery.html">Battery Recycling</a></li>
                 <li><a href="bulb.html">CFL bulb Recycling</a></li>
                 <li><a href="cathod.html">Cathode Recycling</a></li>
-                <li><a href="industries.html">Industries We Serve</a></li>
+                
             </ul>
             
             <li class="dropdown">
@@ -54,7 +56,7 @@
                 <li><a href="economical.html">Economical</a></li>
                 <li><a href="crc.html">CSR Activities</a></li>
             </ul>
-            <li><a href="#">Carbon Calculator</a></li>
+            <li><a href="auth.php">Carbon Calculator</a></li>
             
             <li><a href="pickup.html" class="nav-btn">Schedule Pickup</a></li>
         </ul>
@@ -86,6 +88,63 @@
     <h4>Ceylon Waste Management</h4>
 </div>
 </section>
+
+<div style="
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 28px;
+">
+    <a
+        href="documents/Profile_CWM Group.pdf"
+        download
+        style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 25px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #25b94f, #16873b);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(22, 135, 59, 0.25);
+            cursor: pointer;
+        "
+        onmouseover="
+            this.style.background='#ffffff';
+            this.style.color='#16873b';
+            this.style.borderColor='#16873b';
+            this.style.transform='translateY(-3px)';
+            this.style.boxShadow='0 12px 28px rgba(22,135,59,0.30)';
+        "
+        onmouseout="
+            this.style.background='linear-gradient(135deg, #25b94f, #16873b)';
+            this.style.color='#ffffff';
+            this.style.borderColor='transparent';
+            this.style.transform='translateY(0)';
+            this.style.boxShadow='0 8px 20px rgba(22,135,59,0.25)';
+        "
+    >
+        <span style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            color: #16873b;
+            background: #ffffff;
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 800;
+        ">↓</span>
+
+        Download Company Profile
+    </a>
+</div>
 <br><br>
 <section class="about-page">
 
@@ -101,7 +160,8 @@
             <li><a href="ourjourney.html">Our Journey</a></li>
             <li><a href="leadership.html">Leadership</a></li>
                      <li><a href="reserch.html">Research & Development (R&D)</a></li>
-        </ul>
+            <li><a href="projects.html">Projects and Case Studies</a></li>
+                    </ul>
 
     </aside>
 
@@ -214,9 +274,80 @@
 
 </section>
 
-<footer>
+<!-- Footer -->
+<!-- ================= FOOTER ================= -->
 
-<p>© 2026 E-Waste Management. All Rights Reserved.</p>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+                <img src="images/logofull.png" alt="CWM Logo">
+            </div>
+
+            <h3>Ceylon Waste Management Limited</h3>
+
+            <p>
+                Secure data destruction and responsible e-waste
+                processing for a safer and more sustainable future.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+            <a href="aboutcwm.html">About Us</a>
+            <a href="sustainability.html">Sustainability</a>
+            <a href="auth.php">Carbon Calculator</a>
+            <a href="pickup.html">Schedule Pickup</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Our Services</h4>
+
+            <a href="securitydata.html">Data Destruction</a>
+            <a href="ewasterecycle.html">E-Waste Recycling</a>
+            <a href="metalrefining.html">Metal Refining</a>
+            <a href="battery.html">Battery Recycling</a>
+            <a href="bulb.html">CFL Recycling</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>Contact</h4>
+
+            <p>
+                📍 Ceylon Waste Management Pvt Ltd<br>
+                No. 300, IDH Road,<br>
+                Kolonnawa, Sri Lanka
+            </p>
+
+            <p>📞 +94 11 234 5678</p>
+
+            <p>✉ info@ewaste.lk</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Ceylon Waste Management.
+        All Rights Reserved.
+
+    </div>
 
 </footer>
 
