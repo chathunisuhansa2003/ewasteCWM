@@ -1,0 +1,1039 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f6f9f7;
+    color: #26352d;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+}
+
+.navbar {
+    width: 92%;
+    max-width: 1350px;
+
+    height: 82px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 145px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links > li > a {
+    color: #26352d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-links > li > a:hover {
+    color: #20a64a;
+}
+
+
+/* =====================================================
+   NAV BUTTON
+===================================================== */
+
+.nav-btn {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 21px !important;
+
+    color: white !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25b94f,
+            #16873b
+        );
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(37, 185, 79, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 185, 79, 0.35);
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 32px;
+    left: -15px;
+
+    width: 245px;
+
+    padding: 8px 0;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+
+    padding: 11px 18px;
+
+    color: #4d5b53;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #e9f8ee;
+
+    color: #15943d;
+
+    padding-left: 24px;
+}
+
+
+/* =====================================================
+   BANNER / HERO
+===================================================== */
+
+.cwm-banner{
+    width:90%;
+    max-width:1200px;
+
+    height:320px;
+
+    margin:125px auto 0;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            rgba(0,80,35,.35),
+            rgba(0,80,35,.45)
+        ),
+        url("images/ewasterecyclebanner.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* =====================================================
+   BACKGROUND CIRCLES
+===================================================== */
+
+.overlay-circle{
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    right:-250px;
+    top:-200px;
+}
+
+.overlay-circle2{
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    right:80px;
+    bottom:-300px;
+}
+
+
+/* =====================================================
+   BANNER CONTENT
+===================================================== */
+.banner-content{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:440px;
+    height:100%;
+
+    padding:55px;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+
+    background:linear-gradient(
+        135deg,
+        #168f42,
+        #65b934
+    );
+
+    color:#fff;
+
+    clip-path:
+        polygon(
+            0 0,
+            85% 0,
+            100% 50%,
+            85% 100%,
+            0 100%
+        );
+}
+
+.banner-content h1{
+    font-size:46px;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    max-width:300px;
+}
+
+
+
+/* =====================================================
+   ABOUT CWM CONTENT
+===================================================== */
+
+.about-cwm-content{
+    width:90%;
+    max-width:1200px;
+
+    margin:12px auto 0;
+}
+
+.about-cwm-content h4{
+    color:#15803d;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.about-page {
+    width: 92%;
+    max-width: 1350px;
+
+    margin: 80px auto;
+
+    display: grid;
+
+    grid-template-columns: 270px 1fr;
+
+    gap: 65px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.about-sidebar {
+    position: sticky;
+
+    top: 110px;
+
+    height: fit-content;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.about-sidebar h2 {
+    color: #158b3c;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.about-sidebar li {
+    border-bottom: 1px solid #edf1ee;
+}
+
+.about-sidebar li:last-child {
+    border-bottom: none;
+}
+
+.about-sidebar li a {
+    display: block;
+
+    padding: 13px 5px;
+
+    color: #65736a;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.about-sidebar li a:hover {
+    color: #1ba247;
+
+    padding-left: 10px;
+}
+
+.about-sidebar li.active a {
+    color: #15943d;
+
+    font-weight: 700;
+
+    border-left: 3px solid #24ad4c;
+
+    padding-left: 12px;
+
+    background: #f1fbf4;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-content {
+    min-width: 0;
+
+    padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.about-content > h1 {
+    color: #20372a;
+
+    font-size: clamp(35px, 4vw, 52px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.title-line {
+    width: 70px;
+    height: 4px;
+
+    margin-bottom: 28px;
+
+    border-radius: 10px;
+
+    background: #39b957;
+}
+
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+.about-content h4 {
+    margin-top: 45px;
+
+    margin-bottom: 12px;
+
+    color: #1a9b42;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.about-content h4 + .title-line {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   PARAGRAPHS
+===================================================== */
+
+.about-content p {
+    color: #66736b;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   E-WASTE GALLERY
+===================================================== */
+
+.ewaste-gallery {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 18px;
+
+    margin: 35px 0 50px;
+}
+
+.gallery-item {
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   UNIQUE OPERATIONS
+===================================================== */
+
+.about-content p li {
+    margin-bottom: 12px;
+}
+
+
+/* Better list styling for the existing HTML
+   structure used inside the paragraph */
+
+.about-content > p li {
+    color: #66736b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   E-WASTE INFORMATION BLOCKS
+===================================================== */
+
+.about-content h4 {
+    position: relative;
+}
+
+
+/* =====================================================
+   IMPACT IMAGE
+===================================================== */
+
+.about-content .ewaste-gallery:has(+ p) {
+    grid-template-columns: 1fr;
+}
+
+.about-content .ewaste-gallery:has(+ p) .gallery-item {
+    height: 380px;
+}
+
+.about-content .ewaste-gallery:has(+ p) img {
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   CONTENT HIGHLIGHT
+===================================================== */
+
+.about-content p:first-of-type {
+    font-size: 16px;
+
+    color: #5f6e65;
+}
+
+
+/* =====================================================
+   TEXT EMPHASIS
+===================================================== */
+
+.about-content strong {
+    color: #159440;
+}
+
+
+/* =====================================================
+   CUSTOM CONTENT CARD EFFECT
+===================================================== */
+
+.about-content h4 {
+    padding-left: 14px;
+
+    border-left: 3px solid #39b957;
+}
+
+
+/* =====================================================
+   VIDEO SUPPORT
+===================================================== */
+
+.video-box {
+    position: relative;
+
+    margin-top: 45px;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #103f28;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.video-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.85;
+}
+
+.play-btn {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e92323;
+
+    color: white;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.play-btn:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .about-page {
+        grid-template-columns: 240px 1fr;
+
+        gap: 40px;
+    }
+
+    .ewaste-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ewaste-gallery .gallery-item:first-child {
+        grid-column: span 2;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+    }
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 0;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 20px;
+    }
+
+    .dropdown-menu {
+        left: 50%;
+
+        transform:
+            translateX(-50%)
+            translateY(10px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+
+    /* Hero */
+
+    .cwm-banner {
+        margin-top: 125px;
+
+        min-height: 420px;
+    }
+
+
+    /* Main */
+
+    .about-page {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-top: 60px;
+    }
+
+    .about-sidebar {
+        position: static;
+    }
+
+
+    /* Gallery */
+
+    .ewaste-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item {
+        height: 230px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 94%;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .nav-links > li > a {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 8px 15px !important;
+    }
+
+
+    /* Hero */
+
+    .cwm-banner {
+        min-height: 360px;
+    }
+
+    .banner-content {
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 42px;
+    }
+
+
+    /* Main */
+
+    .about-page {
+        width: 90%;
+
+        margin-top: 50px;
+    }
+
+
+    /* Sidebar */
+
+    .about-sidebar {
+        padding: 23px;
+    }
+
+    .about-sidebar h2 {
+        font-size: 20px;
+    }
+
+
+    /* Content */
+
+    .about-content > h1 {
+        font-size: 36px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+
+        line-height: 1.85;
+    }
+
+
+    /* Gallery */
+
+    .ewaste-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 25px;
+    }
+
+    .ewaste-gallery .gallery-item:first-child {
+        grid-column: auto;
+    }
+
+    .gallery-item {
+        height: 230px;
+    }
+
+
+    /* Impact image */
+
+    .about-content .ewaste-gallery:has(+ p) .gallery-item {
+        height: 260px;
+    }
+
+
+    /* Video */
+
+    .video-box {
+        height: 260px;
+    }
+
+    .play-btn {
+        width: 65px;
+        height: 65px;
+
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 400px
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 9px 13px;
+    }
+
+    .nav-links > li > a {
+        font-size: 11px;
+    }
+
+    .banner-content h1 {
+        font-size: 34px;
+    }
+
+    .about-content > h1 {
+        font-size: 31px;
+    }
+
+    .about-sidebar {
+        padding: 20px;
+    }
+
+    .about-sidebar li a {
+        font-size: 12px;
+    }
+}
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    margin-top: 80px;
+    background: #0b2418;
+    color: white;
+}
+
+.footer-container {
+    width: 92%;
+    max-width: 1350px;
+    margin: auto;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.3fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    background: white;
+    border-radius: 18px;
+}
+
+.footer-logo img {
+    width: 65px;
+}
+
+.footer-about h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.footer-about p {
+    max-width: 350px;
+    color: #b9c9bf;
+    font-size: 13px;
+}
+
+.footer h4 {
+    margin-bottom: 18px;
+    color: #75dc8f;
+    font-size: 14px;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #c0ccc4;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #65d983;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 12px;
+    color: #c0ccc4;
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: #92a399;
+    font-size: 12px;
+}
+
+/* =====================================================
+   FOOTER RESPONSIVE (MEDIA QUERIES)
+===================================================== */
+
+@media (max-width: 1100px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-about p {
+        margin: auto;
+    }
+}

@@ -1,0 +1,9 @@
+document.querySelectorAll('.toggle-password').forEach((button) => {
+    button.addEventListener('click', () => {
+        const input = document.getElementById(button.dataset.target);
+        const showing = input.type === 'text';
+        input.type = showing ? 'password' : 'text';
+        button.textContent = showing ? 'Show' : 'Hide';
+        button.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+    });
+});
